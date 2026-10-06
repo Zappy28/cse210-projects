@@ -17,6 +17,11 @@ class Program
 
     }
 
+    static double DoubleNumber(double num)
+    {
+        return num * 2;
+    }
+
 }
 
 
