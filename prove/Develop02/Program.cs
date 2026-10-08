@@ -4,8 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-    // class object  calls constructor
         Menu myMenu = new Menu();
+        Journal myJournal = new Journal();
+
 
         int response = 0;
         
@@ -15,19 +16,17 @@ class Program
             switch (response)
             {
                 case 1:
-                    Console.WriteLine("Create");
-                    // Call CreateJournalEntry()
+                    myJournal.CreateEntry(); 
                     break;
                 case 2:
-                    Console.WriteLine("Display");
-                    // Call DisplayJournal()
+                    myJournal.DisplayJournal(); 
                     break;
                 case 3:
-                    Console.WriteLine("Save");
+                    Console.WriteLine("Save"); //TODO - write in Journal.cs
                     // Call ReadFromFile()
                     break;
                 case 4:
-                    Console.WriteLine("Write");
+                    Console.WriteLine("Write"); //TODO - write in Journal.cs
                     // Call WriteToFile()
                     break;
             }
