@@ -1,0 +1,45 @@
+public class Word
+{
+    private string _word;
+    private bool _hidden;
+
+    public Word(string word)
+    {
+        _word = word;
+        _hidden = false; 
+    }
+
+    public bool IsHidden()
+    {
+        return _hidden;
+    }
+
+    public void hide()
+    {
+        _hidden = true; 
+    }
+
+    public string GetWordString()
+    {
+        string returnString = "";
+
+        if (_hidden)
+        {
+            foreach(char c in _word)
+            {
+                returnString += "_";
+            }
+        }
+        else
+        {
+            returnString = _word; 
+        }
+
+        return returnString; 
+    }
+
+    public void DisplayWord()
+    {
+        Console.Write($"{GetWordString()} ");
+    }
+}
