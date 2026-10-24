@@ -14,7 +14,7 @@ public class Word
         return _hidden;
     }
 
-    public void hide()
+    public void Hide()
     {
         _hidden = true; 
     }
